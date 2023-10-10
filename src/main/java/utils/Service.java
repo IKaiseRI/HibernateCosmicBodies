@@ -69,7 +69,7 @@ public class Service {
         Planet planet = planetDao.findById(1L)
                 .orElseThrow(() -> new RuntimeException("There is no planet with this id"));
         Satellite satellite = satelliteDao.findById(1L)
-                .orElseThrow(() -> new RuntimeException("There is no satellite with this id"));;
+                .orElseThrow(() -> new RuntimeException("There is no satellite with this id"));
         Star star = starDao.findById(1L)
                 .orElseThrow(() -> new RuntimeException("There is no star with this id"));
 

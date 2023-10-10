@@ -45,12 +45,12 @@ public class HibernateUtil {
             Service.readCosmicBodies(sessionFactory);
             session.getTransaction().commit();
         }
-//        try(SessionFactory sessionFactory = HibernateUtil.buildSessionFactory()) {
-//            Session session = sessionFactory.getCurrentSession();
-//            //Delete from dao
-//            session.beginTransaction();
-//            Service.deleteCosmicBody(sessionFactory);
-//            session.getTransaction().commit();
-//        }
+        try(SessionFactory sessionFactory = HibernateUtil.buildSessionFactory()) {
+            Session session = sessionFactory.getCurrentSession();
+            //Delete from dao
+            session.beginTransaction();
+            Service.deleteCosmicBody(sessionFactory);
+            session.getTransaction().commit();
+        }
     }
 }
